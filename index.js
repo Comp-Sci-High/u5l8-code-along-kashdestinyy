@@ -14,6 +14,8 @@ app.set("view engine", "ejs");
 
 app.use(express.json());
 
+app.use(express.static(__dirname + '/public'))
+
 const countrySchema = new mongoose.Schema({
   country: { type: String },
   flagURL: { type: String },
